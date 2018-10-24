@@ -2,15 +2,33 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>Vision based web content extractor</title>
+        <title>sentiment analysis</title>
+	<script src="static/jquery-3.2.1.min.js"></script>
+	<script>
+    $(function(){
+	$("#predict").click(function(){
+	    $.ajax({
+		url: "/predict",
+		data: {'sentence':$("#sentence").val()},
+		type: 'POST',
+		success: function(data){
+		    $("#data").empty();
+		    $("#data").html(JSON.stringify(data));
+		}
+	    });
+	})
+
+    })
+	</script>
+	
     </head>
 
     <body>
-      <section id="app">
-	<form id="inputForm" method="POST" action="/predict">
-	  <label>sentence: <textarea name="sentence" maxlength="280" rows="10", cols="28">楽しい夏休みが始まるよ！</textarea></label>
-	  <input type="submit" value="Extract">
-	</form>
+    <section id="app">
+    <form>
+	<label>sentence: <textarea id="sentence" name="sentence" maxlength="280" rows="10", cols="28">楽しい夏休みが始まるよ！</textarea></label>
+    <button id="predict" type="button">Predict</button></form><br />
+	<div id="data"></div>
       </section>
     </body>
 </html>
