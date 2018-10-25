@@ -31,7 +31,7 @@ def prediction():
     if not request.form or 'sentence' not in request.form:
         abort(400)
     else:
-        sentences = [request.form['sentence']]
+        sentences = request.form['sentence'].split("\n")
 
     print(sentences)
     start_t = time.time()   
