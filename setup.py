@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name="sentimentja",
-      version="0.0.1b",
+      version="0.0.1e",
       description="Sentiment Analysis for Japanese",
       author="Shun Sugiyama",
       url="https://github.com/sugiyamath/sentiment_ja",

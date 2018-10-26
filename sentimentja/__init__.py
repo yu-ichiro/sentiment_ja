@@ -1,3 +1,7 @@
+import os
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from sentimentja import sentiment
 
 class Analyzer:
