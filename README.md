@@ -1,23 +1,23 @@
 # sentimentja
-Sentiment Analyzer for Japanese
+Sentiment Analyzer for Japanese Language
 
+# Installation
 
-# environment
-
-Anaconda3-5.2.0
-
-For example, if you wanna run anaconda in docker container, you can write this in your Dockerfile:
+You can use ```make``` command.
 
 ```
-RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh -O ~/anaconda.sh && \
-    /bin/bash ~/anaconda.sh -b -p /opt/conda && \
-    rm ~/anaconda.sh && \
-    ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh && \
-    echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
-    echo "conda activate base" >> ~/.bashrc
+git clone https://github.com/sugiyamath/sentiment_ja
+cd sentiment_ja
+make
 ```
 
-# installation
+It will run three phases:
+
+1. Create virtualenv.
+2. Install sentiment_ja.
+3. Test it.
+
+Another way is this:
 
 ```
 git clone https://github.com/sugiyamath/sentiment_ja
@@ -25,7 +25,15 @@ cd sentiment_ja
 python setup.py install
 ```
 
-# example usage
+# Example usage
+
+First, you need to run ipython.
+
+```
+CUDA_VISIBLE_DEVICES=-1 ipython
+```
+
+and then, run this code:
 
 ```python
 from sentimentja import Analyzer
@@ -33,7 +41,7 @@ analyzer = Analyzer()
 analyzer.analyze(["ファイナル・ファンタジーは楽しい", "クソゲーはつまらん"])
 ```
 
-result
+[result]
 
 ```python
 [
@@ -47,4 +55,3 @@ result
   }
 ]
 ```
-
