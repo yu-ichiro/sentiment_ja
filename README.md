@@ -11,12 +11,6 @@ cd sentiment_ja
 make
 ```
 
-It will do three phases:
-
-1. Create virtualenv.
-2. Install sentiment_ja.
-3. Test it.
-
 or just simply this:
 
 ```

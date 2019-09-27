@@ -2,14 +2,14 @@
 all:
 	make prepare
 	make install
-	make test
+	make example
 
 prepare:
 	pip install virtualenv
 	virtualenv venv
 
 install:
-	( source venv/bin/activate; python setup.py install )
+	( source venv/bin/activate; venv/bin/python setup.py install)
 
-test:
-	( source venv/bin/activate; CUDA_VISIBLE_DEVICES=-1 python test/0.py )
+example:
+	( source venv/bin/activate; CUDA_VISIBLE_DEVICES=-1 venv/bin/python test/0.py )
