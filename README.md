@@ -11,13 +11,13 @@ cd sentiment_ja
 make
 ```
 
-It will run three phases:
+It will do three phases:
 
 1. Create virtualenv.
 2. Install sentiment_ja.
 3. Test it.
 
-Another way is this:
+or just simply this:
 
 ```
 git clone https://github.com/sugiyamath/sentiment_ja
@@ -33,7 +33,7 @@ First, you need to run ipython.
 CUDA_VISIBLE_DEVICES=-1 ipython
 ```
 
-and then, run this code:
+and then, run this code on ipython:
 
 ```python
 from sentimentja import Analyzer
