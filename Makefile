@@ -5,11 +5,11 @@ all:
 	make example
 
 prepare:
-	pip install virtualenv
+	pip3 install virtualenv
 	virtualenv venv
 
 install:
 	( . venv/bin/activate; venv/bin/python setup.py install)
 
 example:
-	( . venv/bin/activate; CUDA_VISIBLE_DEVICES=-1 venv/bin/python test/0.py )
+	( . venv/bin/activate; venv/bin/python test/0.py )
