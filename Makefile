@@ -1,6 +1,6 @@
 
 all:
-	make prepare
+	#make prepare
 	make install
 	make example
 
@@ -13,3 +13,4 @@ install:
 
 example:
 	( . venv/bin/activate; venv/bin/python test/0.py )
+	( . venv/bin/activate; venv/bin/python test/1.py )
