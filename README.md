@@ -1,7 +1,9 @@
 # sentimentja
 Sentiment Analyzer for Japanese Language
 
-# Installation
+If you want to use stable version, see 0.0.1 tag: https://github.com/sugiyamath/sentiment_ja/tree/0.0.1
+
+## Installation
 
 You can use ```make``` command.
 
@@ -19,7 +21,7 @@ cd sentiment_ja
 python setup.py install
 ```
 
-# Example usage
+## Example usage
 
 First, you need to run ipython.
 
@@ -31,7 +33,7 @@ and then, run this code on ipython:
 
 ```python
 from sentimentja import Analyzer
-analyzer = Analyzer()
+analyzer = Analyzer(version=1) #or version=2
 analyzer.analyze(["ファイナル・ファンタジーは楽しい", "クソゲーはつまらん"])
 ```
 
@@ -49,3 +51,7 @@ analyzer.analyze(["ファイナル・ファンタジーは楽しい", "クソゲ
   }
 ]
 ```
+
+Note: Currently, this project supports tensorflow==2.0.0a0 only.
+
+Note: If you specify ```Analyzer(version=2)```, the output is more accurate than version 1.
