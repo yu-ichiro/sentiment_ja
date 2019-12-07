@@ -33,7 +33,10 @@ and then, run this code on ipython:
 
 ```python
 from sentimentja import Analyzer
-analyzer = Analyzer(version=1) #or version=2
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+
+analyzer = Analyzer(version=1)
 analyzer.analyze(["ファイナル・ファンタジーは楽しい", "クソゲーはつまらん"])
 ```
 
@@ -50,6 +53,17 @@ analyzer.analyze(["ファイナル・ファンタジーは楽しい", "クソゲ
     'emotions': {'happy': '1.0', 'sad': '2.0', 'disgust': '22.0', 'angry': '5.0', 'fear': '5.0', 'surprise': '1.0'}
   }
 ]
+```
+
+or if you want to use version=2, this:
+
+```python
+from sentimentja import Analyzer
+import tensorflow.compat.v2 as tf
+tf.enable_v2_behavior()
+
+analyzer = Analyzer(version=2)
+analyzer(["ファイナル・ファンタジーは楽しい", "クソゲーはつまらん"])
 ```
 
 Note: Currently, this project supports tensorflow==2.0.0a0 only.

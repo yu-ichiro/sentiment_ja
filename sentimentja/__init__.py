@@ -11,8 +11,6 @@ class Analyzer:
     def __init__(self, version=2):
         self._version = version
         if version == 1:
-            import tensorflow.compat.v1 as tf
-            tf.disable_v2_behavior()
             from sentimentja.v1 import sentiment
             import pickle
 
@@ -27,8 +25,6 @@ class Analyzer:
             self._emolabels = ["happy", "sad", "disgust", "angry", "fear", "surprise"]
             self._sentiment = sentiment
         elif version == 2:
-            import tensorflow.compat.v2 as tf
-            tf.enable_v2_behavior()
             import sentencepiece as spm
             from sentimentja.v2 import sentiment
 
