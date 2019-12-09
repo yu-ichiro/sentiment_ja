@@ -1,6 +1,6 @@
 
 all:
-	#make prepare
+	make prepare
 	make install
 	make example
 
