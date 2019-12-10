@@ -3,6 +3,8 @@ Sentiment Analyzer for Japanese Language
 
 If you want to use stable version, see 0.0.1 tag: https://github.com/sugiyamath/sentiment_ja/tree/0.0.1
 
+If you want to train your own model, see: https://github.com/sugiyamath/sentiment_ja_train
+
 ## Installation
 
 You can use ```make``` command.
