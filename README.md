@@ -70,4 +70,4 @@ analyzer(["ファイナル・ファンタジーは楽しい", "クソゲーは�
 
 Note: Currently, this project supports tensorflow==2.0.0a0 only.
 
-Note: If you specify ```Analyzer(version=2)```, the output is more accurate than version 1.
+Note: If you specify ```Analyzer(version=2)```, the output is more accurate than version 1. The main reason is the tokenizer and the training data.version 1 is char-based, 2 uses BPE. version2 uses more data to train.
