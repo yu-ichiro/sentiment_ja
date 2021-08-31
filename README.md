@@ -1,9 +1,8 @@
 # sentimentja
 Sentiment Analyzer for Japanese Language
 
-If you want to use stable version, see 0.0.1 tag: https://github.com/sugiyamath/sentiment_ja/tree/0.0.1
-
-If you want to train your own model, see: https://github.com/sugiyamath/sentiment_ja_train
+- stable version: https://github.com/sugiyamath/sentiment_ja/tree/0.0.1
+- train your own model: https://github.com/sugiyamath/sentiment_ja_train
 
 ## Installation
 
@@ -25,13 +24,13 @@ python setup.py install
 
 ## Example usage
 
-First, you need to run ipython.
+Run ipython.
 
 ```
 CUDA_VISIBLE_DEVICES=-1 ipython
 ```
 
-and then, run this code on ipython:
+and then, run this code:
 
 ```python
 from sentimentja import Analyzer
@@ -57,7 +56,7 @@ analyzer.analyze(["ファイナル・ファンタジーは楽しい", "クソゲ
 ]
 ```
 
-or if you want to use version=2, this:
+or use version=2:
 
 ```python
 from sentimentja import Analyzer
@@ -69,5 +68,3 @@ analyzer(["ファイナル・ファンタジーは楽しい", "クソゲーは�
 ```
 
 Note: Currently, this project supports tensorflow==2.0.0a0 only.
-
-Note: If you specify ```Analyzer(version=2)```, the output is more accurate than version 1. The main reason is the tokenizer and the training data.version 1 is char-based, 2 uses BPE. version2 uses more data to train.
