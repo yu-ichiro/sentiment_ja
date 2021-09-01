@@ -12,5 +12,4 @@ install:
 	( . venv/bin/activate; venv/bin/python setup.py install)
 
 example:
-	( . venv/bin/activate; venv/bin/python test/0.py )
 	( . venv/bin/activate; venv/bin/python test/1.py )

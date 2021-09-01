@@ -1,7 +1,12 @@
 from sentimentja import Analyzer
 from pprint import pprint
-import tensorflow.compat.v2 as tf
-tf.enable_v2_behavior()
 
-analyzer = Analyzer(version=2)
-pprint(analyzer.analyze(["ファイナル・ファンタジーは楽しい", "クソゲーはつまらん"]))
+analyzer = Analyzer()
+pprint(analyzer.analyze([
+    "final fantasy 14 超楽しい",
+    "クソゲーはつまらん",
+    "エアリスが死んで悲しい",
+    "冒険の書が消える音こわい",
+    "廃人ゲーマーのスキルすごい",
+    "ケフカキモい"
+]))

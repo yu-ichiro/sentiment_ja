@@ -1,18 +1,17 @@
 from setuptools import setup, find_packages
 
 setup(name="sentimentja",
-      version="0.0.2a10",
+      version="0.0.3b",
       description="Sentiment Analysis for Japanese",
       author="Shun Sugiyama",
       url="https://github.com/sugiyamath/sentiment_ja",
-      packages=['sentimentja', 'sentimentja.v1', 'sentimentja.v2'],
+      packages=['sentimentja', 'sentimentja.src'],
       install_requires=[
-          "tensorflow==2.0.0a0",
-          "sentencepiece==0.1.83"
+          "tensorflow==2.6.0",
+          "sentencepiece==0.1.96"
       ],
       package_data={
           'sentimentja':["*"],
-          'sentimentja.v1':["*"],
-          'sentimentja.v2':["*"]
+          'sentimentja.src':["*"],
       }
 )
