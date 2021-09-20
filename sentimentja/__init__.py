@@ -1,11 +1,7 @@
 import os
 import sys
-import warnings
 import sentimentja
 from os.path import dirname, join
-warnings.simplefilter(action='ignore', category=FutureWarning)
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 class Analyzer:
     def __init__(self):
