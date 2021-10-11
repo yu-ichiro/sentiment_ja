@@ -7,7 +7,7 @@ setup(name="sentimentja",
       url="https://github.com/sugiyamath/sentiment_ja",
       packages=['sentimentja', 'sentimentja.src'],
       install_requires=[
-          "tensorflow>=2.7.0",
+          "tensorflow==2.7.0rc0",
           "sentencepiece==0.1.96"
       ],
       package_data={
